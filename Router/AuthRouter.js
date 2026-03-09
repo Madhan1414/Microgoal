@@ -5,6 +5,8 @@ const jwt = require("jsonwebtoken");
 const userValidation = require("../validation/userValidation");
 const userModel = require("../Model/UserModel");
 const genrateToken = require("../utills/genratetoken");
+
+
 router.post("/signup", async (req, res, next) => {
   try {
     const { error } = userValidation.validate(req.body);
